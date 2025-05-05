@@ -26,9 +26,9 @@ export const getBookById = async (req, res) => {
 }
 
 export const createBook = async (req, res) => {
-    const { title, summarty, genre, publication, author} = req.body;
+    const { title, genre, publication, author, summary} = req.body;
     try {
-        const newBook = new Book({ title, summarty, genre, publication, author });
+        const newBook = new Book({ title, summary, genre, publication, author });
         await newBook.save();
         res.status(201).json(newBook);
     } catch (error) {
@@ -39,17 +39,15 @@ export const createBook = async (req, res) => {
 
 export const updateBook = async (req, res) => {
     const { id } = req.params;
-    const { title, summarty, genre, publication, author } = req.body;
+    const { title, summary, genre, publication, author } = req.body;
     try {
         const updatedBook = await Book.findByIdAndUpdate(
             id,
-            { title, summarty, genre, publication, author },
-            { new: true }
+            { title, summary, genre, publication, author }
         );
         if (!updatedBook) {
             return res.status(404).json({ message: 'Book not found' });
         }
-        res.status(200).json(updatedBook);
     } catch (error) {
         console.error('Error updating book:', error);
         res.status(500).json({ message: 'Internal server error' });

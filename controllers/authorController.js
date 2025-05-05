@@ -45,7 +45,7 @@ export const updateAuthor = async (req, res) => {
             id,
             {name, Bio, dateOfBirth, nationality, books}
         );
-        if (!updatedBook) {
+        if (!updatedAuthor) {
             return res.status(404).json({message: 'Author not found'})
         }
     } catch (error) {

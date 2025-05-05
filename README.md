@@ -88,7 +88,7 @@ Para utilizar Postman los endpoints usar este archivo guardar el siguiente texto
 								}
 							}
 						},
-						"url": "http://localhost:3000/api/authors/6818b3cce57a31cc8b438403"
+						"url": "http://localhost:3000/api/authors/6818d111c07f6a8881fa8eeb"
 					},
 					"response": []
 				},
@@ -203,7 +203,7 @@ Para utilizar Postman los endpoints usar este archivo guardar el siguiente texto
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"available\": true,\n    \"titulo\": \"Cien años de soledad\",\n    \"resumen\": \"Una historia sobre la familia Buendía.\",\n    \"genero\": \"Novela\",\n    \"publicacion\": \"1967-05-30T00:00:00.000Z\",\n    \"disponible\": true\n}",
+							"raw": "{\n    \"available\": true,\n    \"title\": \"100 años de soledad - TEST\",\n    \"summary\": \"Una historia sobre la familia Buendía. TEST\",\n    \"genre\": \"Novela - Sangre - Mucha sangre\",\n    \"publication\": \"1967-05-30T00:00:00.000Z\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
